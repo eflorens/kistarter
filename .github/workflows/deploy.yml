@@ -1,0 +1,27 @@
+name: Build and deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    concurrency: ci-${{github.ref}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '24.11.1'
+      - name: Install
+        run: npm install
+      - name: Build
+        run: npx ng build --base-href=/kistarter/ --configuration=production
+      - name: Create 404.html page
+        run: cp dist/kistarter/browser/index.html dist/kistarter/browser/404.html
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/kistarter/browser
+          branch: gh-pages
