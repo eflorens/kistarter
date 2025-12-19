@@ -14,21 +14,6 @@ import { SWORDS } from "./swords";
 import { SYMBOLS } from "./symbols";
 import { WHIPS } from "./whips";
 
-export * from './axes';
-export * from './daggers';
-export * from './generics';
-export * from './gloves';
-export * from './guns';
-export * from './instruments';
-export * from './maces';
-export * from './shields';
-export * from './spears';
-export * from './spell-focuses';
-export * from './spell-receptacles';
-export * from './swords';
-export * from './symbols';
-export * from './whips';
-
 export const ONE_HAND_WEAPONS: Weapon[] = [
   ...AXES,
   ...DAGGERS,

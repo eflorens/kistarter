@@ -8,3 +8,8 @@ export enum ElementType {
   WATER = 7,
   WIND = 8,
 };
+
+export type ElementalResistance = {
+  element: ElementType;
+  value: number;
+};
