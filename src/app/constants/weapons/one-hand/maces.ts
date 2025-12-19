@@ -1,0 +1,68 @@
+import { ElementType, OneHandWeaponCategory, Weapon } from "../../../types";
+
+export const MACES: Weapon[] = [
+  {
+    id: 284,
+    name: 'Gourdin clouté',
+    category: OneHandWeaponCategory.MACE,
+    cost: 5,
+    damage: 3,
+    rank: 1,
+    weight: 2,
+    effects: [{ status: 'evasion_penalty', value: 1 }],
+    recipe: [
+      { material: 'wood', value: 1 },
+      { material: 'teeth', value: 1 },
+    ],
+  },
+  {
+    id: 401,
+    name: 'Maillet',
+    category: OneHandWeaponCategory.MACE,
+    cost: 5,
+    damage: 5,
+    rank: 2,
+    weight: 2,
+    effects: [{ status: 'evasion_penalty', value: 1 }],
+  },
+  {
+    id: 60,
+    name: "Fléau d'armes",
+    category: OneHandWeaponCategory.MACE,
+    cost: 5,
+    damage: 5,
+    rank: 3,
+    weight: 2,
+    effects: [{ status: 'evasion_penalty', value: 2 }],
+    recipe: [
+      { material: 'iron', value: 3 },
+      { material: 'teeth', value: 1 },
+    ],
+  },
+  {
+    id: 49,
+    name: 'Masse',
+    category: OneHandWeaponCategory.MACE,
+    cost: 4,
+    damage: 3,
+    rank: 3,
+    weight: 2,
+    effects: [{ status: 'evasion_penalty', value: 1 }],
+    recipe: [{ material: 'iron', value: 4 }],
+  },
+  {
+    id: 125,
+    name: 'Masse purificatrice',
+    category: OneHandWeaponCategory.MACE,
+    cost: 5,
+    damage: 6,
+    rank: 3,
+    weight: 2,
+    element: ElementType.LIGHT,
+    bonuses: [{ stat: 'intelligence', value: 2 }],
+    recipe: [
+      { material: 'copper', value: 3 },
+      { material: 'amber', value: 1 },
+    ],
+  },
+];
